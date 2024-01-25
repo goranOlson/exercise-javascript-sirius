@@ -43,8 +43,41 @@ document.querySelector('nav a').classList.add('active');
 /* 11 */
 document.querySelector('.logo').classList.remove('logo');
 
-/* 2 */
-/* 2 */
-/* 2 */
-/* 2 */
-/* 2 */
+/* 12 */
+// Top nav
+const newNavItem = document.createElement('a');
+newNavItem.setAttribute('href', '#');
+newNavItem.text = "Sale";
+
+document.querySelector('header nav img').before(newNavItem);
+
+// Footer nav
+const footerNavItem = document.createElement('a');
+footerNavItem.setAttribute('href', '#');
+footerNavItem.text = "Sale";
+
+document.querySelector('footer article').append(footerNavItem);
+
+/* 13 */
+let newProduct = `
+<article class="art-3">
+    <figure><img src="img/hoodie-forrest.png" alt="hoodie"></figure>
+    <h2>Sinus Hoodie</h2>
+    <h3>Forrest</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, dolores.</p>
+</article>`;
+
+document.querySelector('main').insertAdjacentHTML('beforeend', newProduct);
+
+/* 14 */
+// .logo is remove earlier.
+document.querySelector('header img').addEventListener('click', () => { console.log('found you!'); });
+
+/* 15 */
+const artList = document.querySelectorAll('article');
+for (const art of artList) {
+    art.addEventListener('click', (e) => {
+        console.log(`Hi, Im article ${e.currentTarget.children[2].innerText }`);
+     });
+}
+
