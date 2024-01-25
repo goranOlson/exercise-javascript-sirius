@@ -75,7 +75,7 @@ document.querySelector('main').insertAdjacentHTML('beforeend', newProduct);
 document.querySelector('header img').addEventListener('click', () => { console.log('found you!'); });
 
 /* 15 */
-const artList = document.querySelectorAll('article');
+const artList = document.querySelectorAll('main article');
 for (const art of artList) {
     art.addEventListener('click', (e) => {
         console.log(`Hi, Im article ${e.currentTarget.children[2].innerText }`);
