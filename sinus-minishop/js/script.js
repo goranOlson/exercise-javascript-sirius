@@ -65,6 +65,7 @@ let newProduct = `
     <h2>Sinus Hoodie</h2>
     <h3>Forrest</h3>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, dolores.</p>
+    <button>buy</button>
 </article>`;
 
 document.querySelector('main').insertAdjacentHTML('beforeend', newProduct);
